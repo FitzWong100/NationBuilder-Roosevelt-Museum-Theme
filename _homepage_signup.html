@@ -1,0 +1,31 @@
+<div class="container parallax2" style="padding-bottom: 40px;">
+            <div class="row"  style="margin-left: 0px; margin-right: 0px">
+                  <div class=" col-md-offset-3 col-md-6 col-sm-12">
+{% form_for signup %}
+  <div class="form-errors">{% error_messages_for signup %}</div>
+  <div class="row-fluid text-right">
+  <h1 class="text-center bg-primary" style="padding: 50px; border-radius: 15px 50px;">Sign up for our newsletter!</h1>
+    <div class="span4 text-center">
+      <label for="signup_first_name" style="color: white;">First Name</label><br>
+      {% text_field "first_name", class:"text text-center" %}
+    </div>
+    <div class="span4 text-center">
+      <label for="signup_last_name" style="color: white;">Last Name</label><br>
+      {% text_field "last_name", class:"text text-center" %}
+    </div>
+    <div class="span4 text-center">
+      <label for="signup_email" style="color: white;">Email</label><br>
+      {% email_field "email", class:"text text-center", placeholder:"Email address", required: "required" %}
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span4 text-center">
+      {% submit_tag "Join", class:"submit-button btn-primary submit1" %}
+      <div class="form-submit"></div>
+    </div>
+  </div>
+{% endform_for %}
+
+                      </div>
+            </div>
+</div>
